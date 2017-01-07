@@ -1,0 +1,4 @@
+#!/usr/bin/ruby
+#As an alternative run the app with: eviroment RUBYOPT="-rabrt"
+require 'abrt'
+raise 'Boooooom'

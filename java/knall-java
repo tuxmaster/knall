@@ -1,0 +1,4 @@
+#!/bin/bash
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/abrt-java-connector
+export LD_LIBRARY_PATH
+java -cp /usr/bin -agentlib:abrt-java-connector=abrt=on knall -platform.jvmtiSupported true
