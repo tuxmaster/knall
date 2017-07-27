@@ -1,6 +1,6 @@
 Name:		knall
 Version:	1.0.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Crash tests
 Summary(de):	Unfalltest
 License:	GPLv3
@@ -20,6 +20,7 @@ Test tools for check the chain of crashes.
 Werkzeuge um das Verhalten des Systems bei Abstürzen zu testen.
 
 %package cpp
+Obsoletes:	Unfalltest	
 Summary:	The C++ part
 Summary(de):	Der C++ Teil
 
@@ -128,5 +129,8 @@ rm -rf %{buildroot}
 %{_bindir}/knall-ruby
 
 %changelog
+* Thu Jul 27  tuxmaster <github@terrortux.de> 1.0.0-2
+- Obsoletes the old Unfalltest package at the cpp part.
+
 * Sat Jan 07 2017 tuxmaster <github@terrortux.de> 1.0.0-1
 - start
