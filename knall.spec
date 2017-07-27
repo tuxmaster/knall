@@ -9,7 +9,7 @@ Group:		Applications/System
 URL:		https://github.com/tuxmaster/knall
 Requires:	%{name}-cpp = %{version}-%{release}
 Requires:	%{name}-python = %{version}-%{release}
-Requires:       %{name}-kernel = %{version}-%{release}
+Requires:	%{name}-kernel = %{version}-%{release}
 Requires:	%{name}-java = %{version}-%{release}
 Requires:	%{name}-ruby = %{version}-%{release}
 
@@ -43,9 +43,9 @@ The python test.
 Der Python Test.
 
 %package kernel
-BuildArch:      noarch
-Summary:        The kernel part
-Summary(de):    Der Kernel Teil
+BuildArch:	noarch
+Summary:	The kernel part
+Summary(de):	Der Kernel Teil
 
 %description kernel
 The kernel test.
@@ -54,11 +54,11 @@ The kernel test.
 Der Kernel Test.
 
 %package java
-BuildArch:      noarch
+BuildArch:	noarch
 Requires:	java-headless >= 1:1.8.0 javapackages-tools
 BuildRequires:	java-devel >= 1:1.8.0
-Summary:        The java part
-Summary(de):    Der Java Teil
+Summary:	The java part
+Summary(de):	Der Java Teil
 
 %description java
 The java test.
@@ -67,10 +67,10 @@ The java test.
 Der Java Test.
 
 %package ruby
-BuildArch:      noarch
+BuildArch:	noarch
 Requires:	ruby(release)
-Summary:        The ruby part
-Summary(de):    Der Ruby Teil
+Summary:	The ruby part
+Summary(de):	Der Ruby Teil
 
 %description ruby
 The ruby test.
@@ -129,8 +129,9 @@ rm -rf %{buildroot}
 %{_bindir}/knall-ruby
 
 %changelog
-* Thu Jul 27  tuxmaster <github@terrortux.de> 1.0.0-2
+* Thu Jul 27 2017 tuxmaster <github@terrortux.de> 1.0.0-2
 - Obsoletes the old Unfalltest package at the cpp part.
+- Fix rpmlint errors.
 
 * Sat Jan 07 2017 tuxmaster <github@terrortux.de> 1.0.0-1
 - start
