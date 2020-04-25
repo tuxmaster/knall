@@ -1,12 +1,12 @@
 Name:		knall
-Version:	1.0.0
-Release:	2%{?dist}
+Version:	2.0.0
+Release:	1%{?dist}
 Summary:	Crash tests
 Summary(de):	Unfalltest
 License:	GPLv3
 Source0:	knall.tar.xz	
-Group:		Applications/System
 URL:		https://github.com/tuxmaster/knall
+BuildRequires:	java-devel >= 1:1.8.0 gcc
 Requires:	%{name}-cpp = %{version}-%{release}
 Requires:	%{name}-python = %{version}-%{release}
 Requires:	%{name}-kernel = %{version}-%{release}
@@ -32,7 +32,6 @@ Der C++ Test.
 
 %package python
 BuildArch:	noarch
-Requires:	python(abi) = 2.7
 Summary:	The python part
 Summary(de):	Der Python Teil
 
@@ -56,7 +55,6 @@ Der Kernel Test.
 %package java
 BuildArch:	noarch
 Requires:	java-headless >= 1:1.8.0 javapackages-tools
-BuildRequires:	java-devel >= 1:1.8.0
 Summary:	The java part
 Summary(de):	Der Java Teil
 
@@ -129,6 +127,10 @@ rm -rf %{buildroot}
 %{_bindir}/knall-ruby
 
 %changelog
+* Sat Apr 25 2020 tuxmaster <github@terrortux.de> - 2.0.0-1
+- Remove deprecated group tag
+- Switch to python3
+
 * Thu Jul 27 2017 tuxmaster <github@terrortux.de> 1.0.0-2
 - Obsoletes the old Unfalltest package at the cpp part.
 - Fix rpmlint errors.
