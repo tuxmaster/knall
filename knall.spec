@@ -6,7 +6,7 @@ Summary(de):	Unfalltest
 License:	GPLv3
 Source0:	knall.tar.xz	
 URL:		https://github.com/tuxmaster/knall
-BuildRequires:	java-devel >= 1:1.8.0 gcc
+BuildRequires:	java-devel >= 1:1.8.0 g++
 Requires:	%{name}-cpp = %{version}-%{release}
 Requires:	%{name}-python = %{version}-%{release}
 Requires:	%{name}-kernel = %{version}-%{release}
@@ -130,6 +130,7 @@ rm -rf %{buildroot}
 * Sat Apr 25 2020 tuxmaster <github@terrortux.de> - 2.0.0-1
 - Remove deprecated group tag
 - Switch to python3
+- Clean up spec file
 
 * Thu Jul 27 2017 tuxmaster <github@terrortux.de> 1.0.0-2
 - Obsoletes the old Unfalltest package at the cpp part.
